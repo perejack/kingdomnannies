@@ -10,9 +10,10 @@ interface ServiceCardProps {
   benefits: string[];
   image: string;
   salary: string;
+  onApply?: () => void;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, benefits, image, salary }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, benefits, image, salary, onApply }: ServiceCardProps) => {
   return (
     <Card className="group border-0 bg-gradient-card backdrop-blur-sm shadow-medium hover:shadow-large transition-all duration-500 hover:-translate-y-2 animate-fade-in overflow-hidden">
       <div className="relative h-48 overflow-hidden">
@@ -47,8 +48,8 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, image, salary }
         </div>
         
         <Button 
-          variant="outline" 
-          className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+          onClick={onApply}
+          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
         >
           Apply for {title} Role
         </Button>

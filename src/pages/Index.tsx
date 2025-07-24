@@ -23,18 +23,18 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Stylish Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-lg transition-all duration-300 hover:shadow-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo & Brand */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-kenya-gold to-warm-orange rounded-xl flex items-center justify-center shadow-lg">
-                <Heart className="h-6 w-6 text-white" />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-kenya-gold to-warm-orange rounded-xl flex items-center justify-center shadow-lg">
+                <Heart className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-kenya-gold to-warm-orange bg-clip-text text-transparent">
+                <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-kenya-gold to-warm-orange bg-clip-text text-transparent">
                   CareConnect
                 </h1>
-                <p className="text-xs text-gray-600 font-medium">Kenya's #1 Care Jobs</p>
+                <p className="text-xs text-gray-600 font-medium hidden sm:block">Kenya's #1 Care Jobs</p>
               </div>
             </div>
             
@@ -64,7 +64,7 @@ const Index = () => {
             </div>
             
             {/* Right Side - Contact & CTA */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4">
               {/* Trust Badges */}
               <div className="hidden lg:flex items-center gap-3 text-xs text-gray-600">
                 <div className="flex items-center gap-1">
@@ -78,23 +78,24 @@ const Index = () => {
               </div>
               
               {/* Contact Info */}
-              <div className="hidden sm:flex items-center gap-2 text-sm text-gray-600">
+              <div className="hidden md:flex items-center gap-2 text-sm text-gray-600">
                 <Phone className="h-4 w-4 text-kenya-gold" />
-                <span className="font-medium">+254 715 009 829</span>
+                <span className="font-medium text-xs sm:text-sm">+254 715 009 829</span>
               </div>
               
               {/* CTA Button */}
               <Button 
                 onClick={scrollToApplication}
                 size="sm"
-                className="bg-gradient-to-r from-kenya-gold to-warm-orange hover:from-kenya-gold/90 hover:to-warm-orange/90 text-white font-semibold px-4 py-2 shadow-lg transform hover:scale-105 transition-all duration-200"
+                className="bg-gradient-to-r from-kenya-gold to-warm-orange hover:from-kenya-gold/90 hover:to-warm-orange/90 text-white font-semibold px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm shadow-lg transform hover:scale-105 transition-all duration-200"
               >
-                🚀 Quick Apply
+                <span className="hidden sm:inline">🚀 Quick Apply</span>
+                <span className="sm:hidden">Apply</span>
               </Button>
               
               {/* Mobile Menu Button */}
-              <button className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                <Menu className="h-5 w-5 text-gray-700" />
+              <button className="md:hidden p-1 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <Menu className="h-4 w-4 sm:h-5 sm:w-5 text-gray-700" />
               </button>
             </div>
           </div>
@@ -104,14 +105,14 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-kenya-gold via-warm-orange to-kenya-gold animate-pulse"></div>
         
         {/* Floating Action Notification */}
-        <div className="absolute -bottom-8 right-4 hidden lg:block">
-          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs px-3 py-1 rounded-full shadow-lg animate-bounce">
-            ✨ 500+ Jobs Available Today!
+        <div className="absolute -bottom-6 sm:-bottom-8 right-2 sm:right-4 hidden sm:block">
+          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs px-2 sm:px-3 py-1 rounded-full shadow-lg animate-bounce">
+            ✨ 500+ Jobs Available!
           </div>
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-14 sm:pt-16">
         {/* Enhanced Background with Better Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-[20s] ease-linear hover:scale-110"
@@ -125,8 +126,8 @@ const Index = () => {
         <div className="absolute top-20 left-10 w-20 h-20 bg-kenya-gold/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-32 right-20 w-32 h-32 bg-warm-orange/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mt-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-20 mt-4 sm:mt-8">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-white">
               {/* Enhanced Badge with Urgency */}
               <div className="flex items-center gap-2 mb-6 animate-slide-in-left">
@@ -137,7 +138,7 @@ const Index = () => {
               </div>
               
               {/* Improved Headline with Better Typography */}
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight animate-fade-in">
                 <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
                   Find Your
                 </span>
@@ -147,13 +148,13 @@ const Index = () => {
               </h1>
               
               {/* Enhanced Value Proposition */}
-              <div className="mb-8 animate-fade-in">
-                <p className="text-lg sm:text-xl lg:text-2xl mb-6 leading-relaxed text-white/95 font-medium">
+              <div className="mb-6 sm:mb-8 animate-fade-in">
+                <p className="text-base sm:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 leading-relaxed text-white/95 font-medium">
                   Join Kenya's most trusted families as a professional 
                   <span className="font-bold text-kenya-gold"> caregiver, nanny, housekeeper, or cook</span>. 
                   Start your rewarding career today with competitive pay and supportive employers.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90">
+                <div className="grid grid-cols-1 gap-2 sm:gap-3 text-white/90 text-sm sm:text-base">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
                     <span>Caregiving: <span className="font-bold text-kenya-gold">KES 6,000 - 15,000</span></span>
@@ -164,7 +165,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                    <span>Cooking: <span className="font-bold text-kenya-gold">KES 2,000/plate + KES 1,500/day</span></span>
+                    <span>Cooking/chef: <span className="font-bold text-kenya-gold">KES 2,000/plate + KES 1,500/day</span></span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
@@ -174,11 +175,11 @@ const Index = () => {
               </div>
               
               {/* Enhanced CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-slide-in-left">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 animate-slide-in-left">
                 <Button 
                   onClick={scrollToApplication}
                   size="lg" 
-                  className="bg-gradient-to-r from-warm-orange to-red-500 hover:from-warm-orange/90 hover:to-red-500/90 text-white font-bold py-4 px-8 text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow relative overflow-hidden group"
+                  className="bg-gradient-to-r from-warm-orange to-red-500 hover:from-warm-orange/90 hover:to-red-500/90 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow relative overflow-hidden group"
                 >
                   <span className="relative z-10">🚀 Apply Now</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
@@ -186,7 +187,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-2 border-white text-white hover:bg-white hover:text-foreground py-4 px-8 text-lg backdrop-blur-sm bg-white/10 transform hover:scale-105 transition-all duration-300"
+                  className="border-2 border-white text-white hover:bg-white hover:text-foreground py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg backdrop-blur-sm bg-white/10 transform hover:scale-105 transition-all duration-300"
                 >
                   👥 Meet Our Families
                 </Button>
@@ -202,14 +203,14 @@ const Index = () => {
               </div>
               
               {/* Enhanced Stats with Social Proof */}
-              <div className="grid grid-cols-3 gap-4 animate-fade-in">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 animate-fade-in">
                 <StatCard icon={Users} number="8,500+" label="Success Stories" />
                 <StatCard icon={Trophy} number="98.5%" label="Job Placement" />
                 <StatCard icon={Clock} number="<24hrs" label="Quick Start" />
               </div>
               
               {/* Trust Indicators */}
-              <div className="mt-6 flex items-center gap-4 text-white/70 text-sm animate-fade-in">
+              <div className="mt-4 sm:mt-6 flex flex-wrap items-center gap-2 sm:gap-4 text-white/70 text-xs sm:text-sm animate-fade-in">
                 <div className="flex items-center gap-1">
                   <Star className="h-4 w-4 text-yellow-400 fill-current" />
                   <span>4.9/5 Rating</span>
@@ -225,84 +226,84 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative animate-slide-in-right">
+            <div className="relative animate-slide-in-right mt-8 lg:mt-0">
               {/* Enhanced Right Panel with Better Visual Hierarchy */}
-              <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl relative overflow-hidden">
+              <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl relative overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-kenya-gold/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-warm-orange/10 rounded-full blur-2xl"></div>
                 
                 <div className="relative z-10">
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center gap-2 bg-kenya-gold/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <div className="inline-flex items-center gap-2 bg-kenya-gold/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1 sm:py-2 mb-3 sm:mb-4">
                       <div className="w-2 h-2 bg-kenya-gold rounded-full animate-pulse"></div>
-                      <span className="text-kenya-gold font-semibold text-sm">TRENDING NOW</span>
+                      <span className="text-kenya-gold font-semibold text-xs sm:text-sm">TRENDING NOW</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-white mb-2 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                       🔥 Hottest Jobs
                     </h3>
-                    <p className="text-white/80">Premium positions with immediate start</p>
+                    <p className="text-white/80 text-sm sm:text-base">Premium positions with immediate start</p>
                   </div>
                   
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     <div className="group bg-gradient-to-r from-white/15 to-white/5 hover:from-white/25 hover:to-white/10 rounded-xl p-5 border border-white/20 hover:border-kenya-gold/50 transition-all duration-300 transform hover:scale-105">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-kenya-gold to-yellow-400 rounded-xl flex items-center justify-center shadow-lg">
-                            <Heart className="h-6 w-6 text-white" />
+                        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-kenya-gold to-yellow-400 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg">
+                            <Heart className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-white" />
                           </div>
                           <div>
-                            <span className="text-white font-bold text-lg">Caregiver</span>
+                            <span className="text-white font-bold text-sm sm:text-base lg:text-lg">Caregiver</span>
                             <div className="flex items-center gap-1 mt-1">
-                              <Star className="h-3 w-3 text-yellow-400 fill-current" />
+                              <Star className="h-2 w-2 sm:h-3 sm:w-3 text-yellow-400 fill-current" />
                               <span className="text-white/70 text-xs">Children 0-16yrs</span>
                             </div>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="text-kenya-gold font-bold text-xl">KES 6K-15K</div>
+                          <div className="text-kenya-gold font-bold text-sm sm:text-base lg:text-xl">KES 6K-15K</div>
                           <div className="text-green-400 text-xs font-semibold">✓ Child Care Expert</div>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="group bg-gradient-to-r from-white/15 to-white/5 hover:from-white/25 hover:to-white/10 rounded-xl p-5 border border-white/20 hover:border-kenya-gold/50 transition-all duration-300 transform hover:scale-105">
+                    <div className="group bg-gradient-to-r from-white/15 to-white/5 hover:from-white/25 hover:to-white/10 rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-5 border border-white/20 hover:border-kenya-gold/50 transition-all duration-300 transform hover:scale-105">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                            <Home className="h-6 w-6 text-white" />
+                        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg">
+                            <Home className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-white" />
                           </div>
                           <div>
-                            <span className="text-white font-bold text-lg">Housekeeper</span>
+                            <span className="text-white font-bold text-sm sm:text-base lg:text-lg">Housekeeper</span>
                             <div className="flex items-center gap-1 mt-1">
-                              <Star className="h-3 w-3 text-yellow-400 fill-current" />
+                              <Star className="h-2 w-2 sm:h-3 sm:w-3 text-yellow-400 fill-current" />
                               <span className="text-white/70 text-xs">Cleaning • Laundry • Compound</span>
                             </div>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="text-kenya-gold font-bold text-xl">KES 5K-13K</div>
+                          <div className="text-kenya-gold font-bold text-sm sm:text-base lg:text-xl">KES 5K-13K</div>
                           <div className="text-green-400 text-xs font-semibold">✓ Full Service</div>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="group bg-gradient-to-r from-white/15 to-white/5 hover:from-white/25 hover:to-white/10 rounded-xl p-5 border border-white/20 hover:border-kenya-gold/50 transition-all duration-300 transform hover:scale-105">
+                    <div className="group bg-gradient-to-r from-white/15 to-white/5 hover:from-white/25 hover:to-white/10 rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-5 border border-white/20 hover:border-kenya-gold/50 transition-all duration-300 transform hover:scale-105">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-                            <ChefHat className="h-6 w-6 text-white" />
+                        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg">
+                            <ChefHat className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-white" />
                           </div>
                           <div>
-                            <span className="text-white font-bold text-lg">Cook/Chef</span>
+                            <span className="text-white font-bold text-sm sm:text-base lg:text-lg">Cook/Chef</span>
                             <div className="flex items-center gap-1 mt-1">
-                              <Star className="h-3 w-3 text-yellow-400 fill-current" />
+                              <Star className="h-2 w-2 sm:h-3 sm:w-3 text-yellow-400 fill-current" />
                               <span className="text-white/70 text-xs">African • Western Cuisine</span>
                             </div>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="text-kenya-gold font-bold text-xl">KES 2K/plate</div>
+                          <div className="text-kenya-gold font-bold text-sm sm:text-base lg:text-xl">KES 2K/plate</div>
                           <div className="text-green-400 text-xs font-semibold">✓ +1.5K/day</div>
                         </div>
                       </div>
@@ -310,13 +311,13 @@ const Index = () => {
                   </div>
                   
                   {/* Success Story Snippet */}
-                  <div className="bg-gradient-to-r from-green-600/20 to-green-500/20 backdrop-blur-sm rounded-xl p-4 mb-6 border border-green-400/30">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-sm">MK</span>
+                  <div className="bg-gradient-to-r from-green-600/20 to-green-500/20 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 border border-green-400/30">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-xs sm:text-sm">MK</span>
                       </div>
                       <div>
-                        <p className="text-white/90 text-sm italic">
+                        <p className="text-white/90 text-xs sm:text-sm italic">
                           "Got hired in 3 days! Now earning KES 42,000 monthly with a lovely family in Karen."
                         </p>
                         <p className="text-green-300 text-xs mt-1 font-semibold">- Mary K., Caregiver</p>
@@ -326,13 +327,13 @@ const Index = () => {
                   
                   <Button 
                     onClick={scrollToApplication}
-                    className="w-full bg-gradient-to-r from-kenya-gold to-yellow-400 hover:from-kenya-gold/90 hover:to-yellow-400/90 text-black font-bold py-4 text-lg shadow-xl transform hover:scale-105 transition-all duration-300 relative overflow-hidden group"
+                    className="w-full bg-gradient-to-r from-kenya-gold to-yellow-400 hover:from-kenya-gold/90 hover:to-yellow-400/90 text-black font-bold py-3 sm:py-4 text-base sm:text-lg shadow-xl transform hover:scale-105 transition-all duration-300 relative overflow-hidden group"
                   >
                     <span className="relative z-10">🎆 Claim Your Spot Now!</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   </Button>
                   
-                  <div className="text-center mt-4">
+                  <div className="text-center mt-3 sm:mt-4">
                     <p className="text-white/60 text-xs">
                       ⏱️ Average application time: <span className="text-kenya-gold font-semibold">2 minutes</span>
                     </p>
@@ -345,18 +346,18 @@ const Index = () => {
       </section>
 
       {/* Available Positions */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4 animate-fade-in">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-3 sm:mb-4 animate-fade-in">
               Available Positions
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in px-4">
               Choose from high-demand careers that offer stability, growth, and the satisfaction of helping others
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             <ServiceCard
               icon={Heart}
               title="Caregiver"
@@ -370,6 +371,7 @@ const Index = () => {
               ]}
               image={caregiverImage}
               salary="KES 6,000+"
+              onApply={scrollToApplication}
             />
             <ServiceCard
               icon={Home}
@@ -384,6 +386,7 @@ const Index = () => {
               ]}
               image={housekeeperImage}
               salary="KES 5,000+"
+              onApply={scrollToApplication}
             />
             <ServiceCard
               icon={ChefHat}
@@ -398,37 +401,38 @@ const Index = () => {
               ]}
               image={nannyImage}
               salary="KES 2,000/plate"
+              onApply={scrollToApplication}
             />
           </div>
         </div>
       </section>
 
       {/* Detailed Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section id="services" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         {/* Background Decorations */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-kenya-gold/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-warm-orange/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-32 h-32 sm:w-64 sm:h-64 bg-kenya-gold/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-warm-orange/5 rounded-full blur-3xl"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4 animate-fade-in">
+        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-3 sm:mb-4 animate-fade-in">
               Our <span className="bg-gradient-to-r from-kenya-gold to-warm-orange bg-clip-text text-transparent">Premium Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in px-4">
               Professional home care services tailored to meet your family's unique needs
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {/* Caregiver Service */}
-            <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-kenya-gold/30">
-              <div className="w-16 h-16 bg-gradient-to-br from-kenya-gold to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Heart className="h-8 w-8 text-white" />
+            <div className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-kenya-gold/30">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-kenya-gold to-yellow-400 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Heart className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-kenya-gold transition-colors">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-kenya-gold transition-colors">
                 Caregiver Services
               </h3>
-              <div className="text-3xl font-bold text-kenya-gold mb-4">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-kenya-gold mb-3 sm:mb-4">
                 KES 6,000 - 15,000
               </div>
               <p className="text-muted-foreground mb-6">
@@ -455,14 +459,14 @@ const Index = () => {
             </div>
             
             {/* Housekeeping Service */}
-            <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Home className="h-8 w-8 text-white" />
+            <div className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Home className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors">
                 Housekeeping Services
               </h3>
-              <div className="text-3xl font-bold text-blue-600 mb-4">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 mb-3 sm:mb-4">
                 KES 5,000 - 13,000
               </div>
               <p className="text-muted-foreground mb-6">
@@ -489,16 +493,16 @@ const Index = () => {
             </div>
             
             {/* Cooking Service */}
-            <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <ChefHat className="h-8 w-8 text-white" />
+            <div className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <ChefHat className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-orange-600 transition-colors">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-orange-600 transition-colors">
                 Cooking Services
               </h3>
-              <div className="text-2xl font-bold text-orange-600 mb-4">
+              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-orange-600 mb-3 sm:mb-4">
                 KES 2,000/plate<br/>
-                <span className="text-lg">+ KES 1,500/day staff</span>
+                <span className="text-base sm:text-lg">+ KES 1,500/day staff</span>
               </div>
               <p className="text-muted-foreground mb-6">
                 Expert culinary services featuring diverse cuisines prepared by skilled chefs.
@@ -690,19 +694,19 @@ const Index = () => {
         href="https://wa.me/254715009829"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold py-3 px-5 rounded-full shadow-2xl flex items-center gap-3 transform hover:scale-110 transition-all duration-300 group"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold py-2 px-3 sm:py-3 sm:px-5 rounded-full shadow-2xl flex items-center gap-2 sm:gap-3 transform hover:scale-110 transition-all duration-300 group"
       >
         <img 
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRTH3UPKrM2wvqPFgRerHarOjQa8KmqqmadJZUTsUMO0dyUIURnfpakoVViN3nFicsQc&usqp=CAU" 
           alt="WhatsApp" 
-          className="w-8 h-8 group-hover:rotate-12 transition-transform"
+          className="w-6 h-6 sm:w-8 sm:h-8 group-hover:rotate-12 transition-transform"
         />
         <div className="relative">
-          <span>Talk to us</span>
-          <div className="absolute top-0 -right-3 flex items-center">
-            <span className="relative flex h-3 w-3">
+          <span className="text-sm sm:text-base">Talk to us</span>
+          <div className="absolute top-0 -right-2 sm:-right-3 flex items-center">
+            <span className="relative flex h-2 w-2 sm:h-3 sm:w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-400 border-2 border-white"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-green-400 border border-white sm:border-2"></span>
             </span>
           </div>
         </div>
