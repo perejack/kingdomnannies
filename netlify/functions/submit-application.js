@@ -1,15 +1,6 @@
-const nodemailer = require('nodemailer');
-
-// Gmail configuration
-const transporter = nodemailer.createTransporter({
-  service: 'gmail',
-  auth: {
-    user: 'gwellurah@gmail.com',
-    pass: 'rdyo jcan rcih frhf' // App password
-  }
-});
-
 exports.handler = async (event, context) => {
+  // Import nodemailer inside the handler to avoid cold start issues
+  const nodemailer = require('nodemailer');
   // Set CORS headers
   const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -103,7 +94,15 @@ exports.handler = async (event, context) => {
       `
     };
 
-    // Send email
+    // Create transporter and send email
+    const transporter = nodemailer.createTransporter({
+      service: 'gmail',
+      auth: {
+        user: 'gwellurah@gmail.com',
+        pass: 'rdyo jcan rcih frhf' // App password
+      }
+    });
+    
     await transporter.sendMail(mailOptions);
 
     console.log(`New application received from ${name} for ${role} position`);
