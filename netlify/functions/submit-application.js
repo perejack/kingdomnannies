@@ -117,14 +117,14 @@ exports.handler = async (event, context) => {
     };
 
   } catch (error) {
-    console.error('Error sending email:', error);
-    
+    console.error('Function Error:', error);
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({
-        success: false,
-        message: 'Failed to submit application. Please try again.'
+      body: JSON.stringify({ 
+        message: 'Failed to send application. Please try again.',
+        error: error.message, 
+        stack: error.stack 
       })
     };
   }
