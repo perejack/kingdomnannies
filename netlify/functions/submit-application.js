@@ -95,7 +95,7 @@ exports.handler = async (event, context) => {
     };
 
     // Create transporter and send email
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: 'gwellurah@gmail.com',
