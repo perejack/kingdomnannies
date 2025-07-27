@@ -1,8 +1,0 @@
-{
-  "name": "careconnect-netlify-functions",
-  "version": "1.0.0",
-  "description": "Netlify Functions for CareConnect Kenya",
-  "dependencies": {
-    "nodemailer": "^6.9.7"
-  }
-}
